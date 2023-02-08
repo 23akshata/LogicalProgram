@@ -11,7 +11,7 @@ namespace LogicalProgram
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("1 : FibonacciSeries\n 2:PerfectNumber \n 3:PrimeNumber \n 4:ReverseNumber");
+            Console.WriteLine("1 : FibonacciSeries\n 2:PerfectNumber \n 3:PrimeNumber \n 4:ReverseNumber \n 5:GenerateCoupon");
             Console.WriteLine("Enter a Option");
             int Option = Convert.ToInt32(Console.ReadLine());
             switch (Option)
@@ -34,6 +34,11 @@ namespace LogicalProgram
                 case 4:
                     ReverseNumber reverse = new ReverseNumber();
                     reverse.Reverse();
+                    break;
+
+                case 5:
+                    GenerateCoupon couponNumber = new GenerateCoupon();
+                    couponNumber.CouponNumber();
                     break;
             }
             Console.ReadLine();
