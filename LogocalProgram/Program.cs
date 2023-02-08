@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogocalProgram;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace LogicalProgram
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("1 : FibonacciSeries\n ");
+            Console.WriteLine("1 : FibonacciSeries\n 2:PerfectNumber");
             Console.WriteLine("Enter a Option");
             int Option = Convert.ToInt32(Console.ReadLine());
             switch (Option)
@@ -18,6 +19,11 @@ namespace LogicalProgram
                 case 1:
                     FibonacciSeries Num = new FibonacciSeries();
                     Num.Series();
+                    break;
+
+                case 2:
+                    PerfectNumber perfect = new PerfectNumber();
+                    perfect.Perfect();
                     break;
             }
             Console.ReadLine();
